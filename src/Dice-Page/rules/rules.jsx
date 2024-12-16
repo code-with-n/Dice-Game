@@ -1,13 +1,13 @@
-const Rule =({ruleTouched})=>{
+
+import style from "./rule.module.css"
+import Welcome from "../welcome-page/welcome";
+const RulesPage =({setTab})=>{
     return<>
-        <div className="ruleContainer">
-            <div className="ruleInBox">
-                <ul>
-                    <li>Touch the dice which are given in middle </li>
-                    <li>If selected value and dice predicated value same You will get score by your number value</li>
-                    <li>One wrong decission less your number from your getting score</li>
-                </ul>
-            </div>
-        </div>
+    <Welcome setTab={setTab}></Welcome>
+    <div className={style.rulesPage}>
+        <h4>This is Rule page</h4>
+        
+    </div>
     </>
 }
+export default RulesPage;

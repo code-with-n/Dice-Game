@@ -1,0 +1,15 @@
+.rulesPage{
+    border: 1px solid black;
+    /* background-color: black; */
+    height: 150px;
+    /* background-color: blue; */
+    width: 400px;
+    position: relative;
+    bottom: 180px;
+    /* top: 50px; */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 51%;
+}

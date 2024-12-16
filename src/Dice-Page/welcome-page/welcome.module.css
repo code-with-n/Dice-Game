@@ -1,0 +1,64 @@
+.welcome{
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.gameName{
+    background-color: rgb(99, 7, 7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width:300px;
+    border-radius: 10px;
+}
+.imgbox{
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 300px;
+    background-image: url(dice.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.gameOptions{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+}
+.start{
+    padding: 4px 12px;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin :0px 0px 5px 0px;
+
+}
+.rules{
+    background-color: black;
+    color: white;
+    padding: 4px 12px ;
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
