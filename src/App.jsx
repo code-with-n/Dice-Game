@@ -3,32 +3,31 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Start from './components/startGame/start'
+import PlayGame from './components/playGame/play'
+import StartContextProvider from './store/startContext/startcontext'
+import { use } from 'react'
 
+function App() {
+  const [total, setTotal] = useState(0);
+  const [isGameStartd , setGameStarted] = useState(false);
+  const [isRulePage, setRulePage] = useState(false);
+
+  const toggleStart = ()=>{
+    console.log("toggleStarted")
+    setGameStarted(true);
+  }
+  const rulesClicked = ()=>{
+    console.log("rules is clicked...")
+    setRulePage((prev)=> !prev)
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <StartContextProvider>
+   
+    {isGameStartd ? <PlayGame setTotal={setTotal} total={total}></PlayGame> : <Start toggleStart={toggleStart} rulesClicked={rulesClicked} isRulePage={isRulePage}></Start>}
+    
+
+    </StartContextProvider>
   )
 }
 
