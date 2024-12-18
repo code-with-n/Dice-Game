@@ -1,13 +1,12 @@
 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+// import './App.css'
 
 import Start from './components/startGame/start'
 import PlayGame from './components/playGame/play'
 import StartContextProvider from './store/startContext/startcontext'
-import { use } from 'react'
+// import { use } from 'react'
 
 function App() {
   const [total, setTotal] = useState(0);
