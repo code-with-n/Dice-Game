@@ -9,9 +9,11 @@ import StartContextProvider from './store/startContext/startcontext'
 // import { use } from 'react'
 
 function App() {
+
   const [total, setTotal] = useState(0);
   const [isGameStartd , setGameStarted] = useState(false);
   const [isRulePage, setRulePage] = useState(false);
+
 
   const toggleStart = ()=>{
     console.log("toggleStarted")
